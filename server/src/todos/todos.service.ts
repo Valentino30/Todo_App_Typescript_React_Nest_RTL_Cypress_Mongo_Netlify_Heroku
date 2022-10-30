@@ -9,7 +9,7 @@ export class TodosService {
   constructor(@InjectModel('Todo') private readonly todoModel: Model<Todo>) {}
 
   async getTodos(): Promise<Todo[]> {
-    const todos = await this.todoModel.find().exec();
+    const todos = await this.todoModel.find()
     return todos as Todo[];
   }
 
